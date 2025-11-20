@@ -1,76 +1,105 @@
-import Image from "next/image";
 
 export default function Home() {
   return (
-    // <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-    //   <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-    //     <Image
-    //       className="dark:invert"
-    //       src="/next.svg"
-    //       alt="Next.js logo"
-    //       width={100}
-    //       height={20}
-    //       priority
-    //     />
-    //     <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-    //       <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-    //         To get started, edit the page.js file.
-    //       </h1>
-    //       <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-    //         Looking for a starting point or more instructions? Head over to{" "}
-    //         <a
-    //           href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-    //           className="font-medium text-zinc-950 dark:text-zinc-50"
-    //         >
-    //           Templates
-    //         </a>{" "}
-    //         or the{" "}
-    //         <a
-    //           href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-    //           className="font-medium text-zinc-950 dark:text-zinc-50"
-    //         >
-    //           Learning
-    //         </a>{" "}
-    //         center.
-    //       </p>
-    //     </div>
-    //     <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-    //       <a
-    //         className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-    //         href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-    //         target="_blank"
-    //         rel="noopener noreferrer"
-    //       >
-    //         <Image
-    //           className="dark:invert"
-    //           src="/vercel.svg"
-    //           alt="Vercel logomark"
-    //           width={16}
-    //           height={16}
-    //         />
-    //         Deploy Now
-    //       </a>
-    //       <a
-    //         className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-    //         href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-    //         target="_blank"
-    //         rel="noopener noreferrer"
-    //       >
-    //         Documentation
-    //       </a>
-    //     </div>
-    //   </main>
-    // </div>
-    <div className="App">
-        <Image
-           className="dark:invert"
-           src="/next.svg"
-           alt="Next.js logo"
-           width={100}
-           height={20}
-           priority
-         />
+    <div className="">
       <h1>Welcome to Next.js Learning App!!!</h1>
+
+      <h2>Core Concepts</h2>
+
+<h3>Next.js Introduction</h3>
+
+<h4>Introduction</h4>
+<p>
+Next.js is a React framework for building fast, SEO-friendly web apps with server-side,
+static, and full-stack capabilities. It simplifies routing, data fetching, and performance optimization.
+</p>
+
+<hr></hr>
+
+<h3>Basic Concepts</h3>
+
+<h4>Pages Router</h4>
+<p>
+The traditional routing system using the <code>/pages</code> directory. It supports SSR, SSG, CSR, and API routes with simple file-based navigation.
+</p>
+
+<h4>Static Site Generation (SSG)</h4>
+<p>
+Pre-renders pages at build time for fast loading and improved SEO. Great for static or rarely changing content.
+</p>
+
+<h4>Server-Side Rendering (SSR)</h4>
+<p>
+Renders pages per request, enabling dynamic, personalized, and frequently updated content.
+</p>
+
+<h4>CSS Modules</h4>
+<p>
+Provides locally scoped CSS for components, preventing global style conflicts and improving maintainability.
+</p>
+
+<h4>Public Folder</h4>
+<p>
+Stores static assets like images and files that can be accessed directly through URL paths.
+</p>
+
+  <hr></hr>
+
+<h3>Intermediate Concepts</h3>
+
+<h4>App Router</h4>
+<p>
+A modern routing system using the <code>/app</code> directory with layouts, streaming, and server components.
+</p>
+
+<h4>Layouts & Nested Layouts</h4>
+<p>
+Lets you create shared UI wrappers for pages and nested routes, reducing code duplication.
+</p>
+
+<h4>API Routes</h4>
+<p>
+Allows building backend endpoints directly inside Next.js without a separate server.
+</p>
+
+<h4>Next/Image Optimization</h4>
+<p>
+Automatically optimizes images for size, format, and responsiveness, improving page performance.
+</p>
+
+<h4>Dynamic Routing</h4>
+<p>
+Creates routes based on URL parameters using bracket syntax like <code>[id]</code> for flexible navigation.
+</p>
+
+<hr></hr>
+
+<h3>Advanced Concepts</h3>
+
+<h4>React Server Components (RSC)</h4>
+<p>
+Render components on the server by default, reducing client bundle size and improving performance.
+</p>
+
+<h4>Incremental Static Regeneration (ISR)</h4>
+<p>
+Regenerates static pages in the background at set intervals, combining static speed with dynamic updates.
+</p>
+
+<h4>Server Actions</h4>
+<p>
+Allows running server-side logic directly from components without using API routes or client-side calls.
+</p>
+
+<h4>Middleware</h4>
+<p>
+Executes code before requests are processed, useful for auth, redirects, and filtering traffic.
+</p>
+
+<h4>Edge Functions</h4>
+<p>
+Ultra-fast serverless functions running close to users globally, reducing latency for critical logic.
+</p>
     </div>
   );
 }

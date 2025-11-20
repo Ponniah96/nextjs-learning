@@ -1,5 +1,6 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import Image from "next/image";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -20,8 +21,30 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased App`}
       >
+        <div style={{ display: "flex", alignItems: "center", gap: "1rem", justifyContent: "space-between", marginBottom: "2rem", position: "sticky", top:0, backgroundColor: "#0a0a0a", padding: "10px 0", zIndex: 1000 }}>
+
+        <a href="/">
+        
+         <Image
+           className="dark:invert"
+           src="/next.svg"
+           alt="Next.js logo"
+           width={100}
+           height={20}
+           />
+        </a> 
+        <nav style={{display:"flex",gap:"8px"}}>
+        <a href="/csr">CSR</a>  
+        <a href="/ssg">SSG</a>
+        <a href="/ssr">SSR</a>
+        <a href="/image">Image</a>
+        <a href="/dashboard">Go to Dashboard</a>
+        <a href="/api-test">API Test</a>
+
+      </nav>
+        </div>
         {children}
       </body>
     </html>
